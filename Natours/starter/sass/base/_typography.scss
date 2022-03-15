@@ -1,0 +1,37 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  /* backface-visibility: hidden;  fixes moving up of element caused by animation*/
+  &--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+    /* animation-iteration-count: 3; will happen 3 times */
+  }
+  &--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.5px;
+    animation: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+  }
+}
