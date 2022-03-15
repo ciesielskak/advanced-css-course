@@ -1,50 +1,50 @@
 .btn {
-    &--animated {
-      animation: moveInBtn;
-      animation-duration: 1s;
-      animation-timing-function: ease-out;
-      animation-delay: 1.2s;
-      animation-fill-mode: backwards; /* powoduje, ze animacja btn pokazuje sie z z animation-delay - a nie wyswietla btn po wyrenderowaniu str*/
-    }
-    &--white {
-      background-color: #fff;
-      color: $color-grey-dark;
-      &::after {
-        background-color: white;
-      }
-    }
-    &:link,
-    &:visited {
-      position: relative;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 15px 40px;
-      display: inline-block;
-      border-radius: 100px;
-      transition: all 0.2s;
-    }
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* x, y, blur i color*/
-      &::after {
-        transform: scale(1.5);
-        opacity: 0;
-      }
-    }
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
+  &--animated {
+    animation: moveInBtn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: backwards; /* powoduje, ze animacja btn pokazuje sie z z animation-delay - a nie wyswietla btn po wyrenderowaniu str*/
+  }
+  &--white {
+    background-color: #fff;
+    color: $color-grey-dark;
     &::after {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      border-radius: 100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all 0.4s;
+      background-color: white;
     }
   }
+  &:link,
+  &:visited {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* x, y, blur i color*/
+    &::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
